@@ -6,13 +6,14 @@ const counterIncrement = () => ({type: Actions.COUNTER_INCREMENT});
 
 const counterDecrement = () => ({type: Actions.COUNTER_DECREMENT});
 
-const mapStateToProps = (state) => ({
-  count: state.count,
-});
+const mapStateToProps = (state) => {
+  console.log('State: ', state);
+  return {count: state.CounterReducer.count};
+};
 
 const mapDispatchToProps = (dispatch) => ({
-  increment: () => dispatch(counterIncrement),
-  decrement: () => dispatch(counterDecrement),
+  increment: () => dispatch(counterIncrement()),
+  decrement: () => dispatch(counterDecrement()),
 });
 
 const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);

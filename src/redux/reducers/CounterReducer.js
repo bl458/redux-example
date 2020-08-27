@@ -1,13 +1,16 @@
 import Actions from '../actions/ActionTypes';
 
-const CounterReducer = (state = {count: 0}, action) => {
+const CounterReducer = (state, action) => {
+  console.log(action.type);
   switch (action.type) {
     case Actions.COUNTER_INCREMENT:
-      return Object.assign({}, state, {count: state.count + 1});
+      console.log('Entered Increment');
+      return {count: state.count + 1};
     case Actions.COUNTER_DECREMENT:
-      return Object.assign({}, state, {count: state.count - 1});
+      console.log('Entered Decrement');
+      return {count: state.count - 1};
     default:
-      return state;
+      return {count: 0};
   }
 };
 
