@@ -11,8 +11,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  increment: dispatch(counterIncrement),
-  decrement: dispatch(counterDecrement),
+  increment: () => dispatch(counterIncrement),
+  decrement: () => dispatch(counterDecrement),
 });
 
 const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);
