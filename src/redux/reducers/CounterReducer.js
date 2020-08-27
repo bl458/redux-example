@@ -1,6 +1,6 @@
 import Actions from '../actions/ActionTypes';
 
-const CounterReducer = (state, action) => {
+const counterReducer = (state, action) => {
   console.log(action.type);
   switch (action.type) {
     case Actions.COUNTER_INCREMENT:
@@ -14,4 +14,4 @@ const CounterReducer = (state, action) => {
   }
 };
 
-export default CounterReducer;
+export default counterReducer;

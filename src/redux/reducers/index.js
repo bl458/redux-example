@@ -1,7 +1,7 @@
 import {combineReducers, createStore} from 'redux';
-import CounterReducer from './CounterReducer';
+import counterReducer from './CounterReducer';
 
-const AppReducers = combineReducers({CounterReducer});
+const AppReducers = combineReducers({counterReducer});
 
 const rootReducer = (state, action) => {
   return AppReducers(state, action);

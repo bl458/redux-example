@@ -8,7 +8,7 @@ const counterDecrement = () => ({type: Actions.COUNTER_DECREMENT});
 
 const mapStateToProps = (state) => {
   console.log('State: ', state);
-  return {count: state.CounterReducer.count};
+  return {count: state.counterReducer.count};
 };
 
 const mapDispatchToProps = (dispatch) => ({
