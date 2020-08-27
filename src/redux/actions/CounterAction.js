@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import Counter from '../../components/Counter';
-import * as Actions from './ActionTypes';
+import Actions from './ActionTypes';
 
 const counterIncrement = () => ({type: Actions.COUNTER_INCREMENT});
 

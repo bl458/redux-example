@@ -1,13 +1,13 @@
 import React from 'react';
-
 import {Provider} from 'react-redux';
-import {CounterAction} from './redux/actions/CounterAction';
-import store from './redux/Store';
+
+import ConnectedCounter from './redux/actions/CounterAction';
+import store from './redux/reducers/index';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <CounterAction />
+      <ConnectedCounter />
     </Provider>
   );
 };
